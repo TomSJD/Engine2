@@ -5,7 +5,7 @@
 
     Private parentForm As Form1
     Private device As Graphics
-    Private pictureBox As PictureBox
+    Private WithEvents pictureBox As PictureBox
     Private renderImage As Bitmap
     Private WithEvents gameTimer As Timer
     Public Shared stateManager As StateManager
@@ -74,6 +74,15 @@
 
     Private Sub Render(ByVal g As Graphics)
         stateManager.Render(g)
+    End Sub
+
+    ' Functions for input. I hate VB with a passion :)
+    Public Sub MouseMoveEvent(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pictureBox.MouseMove
+        InputManager.MouseMove(e.X, e.Y)
+    End Sub
+
+    Public Sub MouseClickEvent(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pictureBox.MouseClick
+        InputManager.MouseClick(e)
     End Sub
 
     Protected Overrides Sub Finalize()

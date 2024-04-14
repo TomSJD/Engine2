@@ -76,8 +76,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Engine\Game.vb" />
+    <Compile Include="Engine\Input\IInput.vb" />
+    <Compile Include="Engine\Input\InputManager.vb" />
     <Compile Include="Engine\State.vb" />
     <Compile Include="Engine\StateManager.vb" />
+    <Compile Include="Engine\UI\UIButton.vb" />
+    <Compile Include="Engine\UI\UIComponent.vb" />
+    <Compile Include="Engine\Utils\Fonts.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +92,7 @@
     </Compile>
     <Compile Include="Game\GameInfo.vb" />
     <Compile Include="Game\States\MenuState.vb" />
+    <Compile Include="Game\States\TestState.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
