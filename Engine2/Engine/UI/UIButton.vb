@@ -23,6 +23,7 @@
 
     Public Overrides Sub Render(device As Graphics)
         device.FillRectangle(_backgroundBrush, New RectangleF(Position, _size))
+        device.TextRenderingHint = Drawing.Text.TextRenderingHint.AntiAlias
         device.DrawString(_text, _font, _textBrush, New PointF(Position.X + _padding / 2, Position.Y + _padding / 2))
     End Sub
 

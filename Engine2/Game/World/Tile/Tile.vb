@@ -1,14 +1,22 @@
-﻿Public MustInherit Class Tile
+﻿Imports System.Runtime.InteropServices
+
+Public MustInherit Class Tile
 
     Public Const TILE_SIZE As Integer = 32
 
+    Private _x As Integer
+    Private _y As Integer
     Private _name As String
-    Private _testColour As Brush
 
-    Public Sub New(ByVal name As String, ByVal testColour As Brush)
+    Public Sub New(ByVal name As String, ByVal x As Integer, ByVal y As Integer)
         _name = name
-        _testColour = testColour
+        _x = x
+        _y = y
     End Sub
+
+    Public Overridable Sub Update()
+    End Sub
+    Public MustOverride Sub Render(device As Graphics)
 
     Public ReadOnly Property Name As String
         Get
@@ -16,9 +24,15 @@
         End Get
     End Property
 
-    Public ReadOnly Property TestColour As Brush
+    Public ReadOnly Property X As Integer
         Get
-            Return _testColour
+            Return _x
+        End Get
+    End Property
+
+    Public ReadOnly Property Y As Integer
+        Get
+            Return _y
         End Get
     End Property
 End Class

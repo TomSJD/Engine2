@@ -83,6 +83,7 @@
     <Compile Include="Engine\UI\UIButton.vb" />
     <Compile Include="Engine\UI\UIComponent.vb" />
     <Compile Include="Engine\Utils\Fonts.vb" />
+    <Compile Include="Engine\Utils\TickTimer.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +92,19 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Game\GameInfo.vb" />
+    <Compile Include="Game\Item\Inventory.vb" />
+    <Compile Include="Game\Item\Item.vb" />
+    <Compile Include="Game\Item\Items.vb" />
+    <Compile Include="Game\Item\ItemStack.vb" />
+    <Compile Include="Game\Item\Items\IronOreItem.vb" />
     <Compile Include="Game\States\MenuState.vb" />
     <Compile Include="Game\States\TestState.vb" />
-    <Compile Include="Game\World\Chunk.vb" />
+    <Compile Include="Game\World\HUD.vb" />
     <Compile Include="Game\World\Tile\EmptyTile.vb" />
-    <Compile Include="Game\World\Tile\TestTile.vb" />
+    <Compile Include="Game\World\Tile\Factory\FactoryTile.vb" />
+    <Compile Include="Game\World\Tile\Factory\Miner.vb" />
+    <Compile Include="Game\World\Tile\Ore\IronOre.vb" />
+    <Compile Include="Game\World\Tile\Ore\OreTile.vb" />
     <Compile Include="Game\World\Tile\Tile.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -136,6 +145,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
