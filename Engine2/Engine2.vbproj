@@ -93,6 +93,10 @@
     <Compile Include="Game\GameInfo.vb" />
     <Compile Include="Game\States\MenuState.vb" />
     <Compile Include="Game\States\TestState.vb" />
+    <Compile Include="Game\World\Chunk.vb" />
+    <Compile Include="Game\World\Tile\EmptyTile.vb" />
+    <Compile Include="Game\World\Tile\TestTile.vb" />
+    <Compile Include="Game\World\Tile\Tile.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
